@@ -64,7 +64,7 @@ See the LICENSE file for details.
 ## 📈 Correlation Analysis
 
 ![Correlation](images/correlation_top20.png)
-This chart shows the top features most correlated with log(k), helping guide feature selection and model interpretation.
+This chart displays the top features most strongly correlated with log(k), aiding in feature selection and model interpretation.
 
 ## 🔬 Feature Importance (SHAP Analysis)
 
