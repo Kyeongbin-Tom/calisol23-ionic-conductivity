@@ -12,6 +12,7 @@ As a first-year chemical engineering student, I aimed to apply machine learning 
 This project helped me understand the relationship between composition and conductivity, while gaining hands-on experience in end-to-end modeling.
 
 ## 📁 Project Structure
+
 bash
 calisol23-ionic-conductivity/
 ├── data/
@@ -31,7 +32,6 @@ calisol23-ionic-conductivity/
 ├── requirements.txt           # Python dependencies
 └── README.md                  # Project documentation
 
-```
 
 ## 📊 Dataset Information
 This project uses the CALiSol‑23 dataset, which contains experimental ionic conductivity data for various lithium salt and solvent combinations.
