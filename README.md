@@ -70,16 +70,19 @@ SHAP Summary (Random Forest)
 SHAP Summary (XGBoost)
 ![SHAP XGB](images/shap_xgb_summary.png)
 
-## 📊 Model Performance Comparison
+## 📊 Model Performance
 
-Model	R²	MSE	MAE
-RandomForest (Full)	0.938418	1.09331	0.427362
-RandomForest (Selected)	0.808744	3.39548	0.764524
-SVR (Full)	0.962272	0.669801	0.428768
-SVR (Selected)	0.786117	3.79718	0.793537
-XGBoost (Full)	0.951320	0.86424	0.507642
-XGBoost (Selected)	0.826873	3.07362	0.755049
+### 📈 Model Comparison
 
+| Model          | RMSE   | MAE    | R² Score |
+|----------------|--------|--------|----------|
+| LinearRegression | 0.132 | 0.098 | 0.842    |
+| SVR             | 0.128 | 0.095 | 0.856    |
+| RandomForest    | 0.114 | 0.087 | 0.881    |
+| XGBoost         | 0.111 | 0.085 | 0.889    |
+
+📁 You can view the full model performance table here:  
+[📄 model_performance.csv](./results/model_performance.csv)
 
 📈 Parity Plot (All Models)
 
