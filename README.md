@@ -40,7 +40,7 @@ This project uses the CALiSol‑23 dataset, which contains experimental ionic co
 | **Name**    | CALiSol‑23                                                                                  |
 | **Citation**| Mortensen et al., *Scientific Data* (2024)                                                  |
 | **DOI**     | [10.1038/s41597-024-03575-8](https://doi.org/10.1038/s41597-024-03575-8)                    |
-| **Source**  | [DTU Data Portal](https://doi.org/10.11583/DTU.24978278)                                    |
+| **Source**  | [Scientific Data (Nature)](https://doi.org/10.1038/s41597-024-03575-8)                                    |
 | **License** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                                   |
 
 This dataset is freely available for redistribution and modification, provided that appropriate credit is given.
