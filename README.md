@@ -1,4 +1,7 @@
 # 🔋 CALiSol‑23: Ionic Conductivity Prediction
+```txt
+Machine learning-based prediction of lithium-ion electrolyte conductivity using CALiSol‑23 dataset.
+```
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -8,7 +11,7 @@ We utilize the **CALiSol‑23 dataset** and apply multiple regression models wit
 
 ## 🎯 Objective
 As a first-year chemical engineering student, my goal was to combine machine learning and experimentation to predict and optimize the results. 
-I focused on figuring out how composition and temperature affect ionic conductivity, and how to recommend better electrolyte formulations.
+I focused on understanding how **electrolyte composition** and **temperature** affect ionic conductivity, and how to **recommend optimal formulations** using interpretable machine learning.
 
 ## 📁 Project Structure
 
@@ -36,7 +39,7 @@ This project uses the CALiSol‑23 dataset, which contains experimental ionic co
 
   - 📚 Citation:
 Niels Asger Mortensen et al., "CALiSol‑23: Experimental electrolyte conductivity data for various Li‑salts and solvent combinations", Scientific Data (2024)
-DOI: 10.1038/s41597-024-03575-8
+DOI: [10.1038/s41597-024-03575-8](https://doi.org/10.1038/s41597-024-03575-8)
 
   - 📁 Dataset Repository: DTU Data Portal
 
@@ -64,22 +67,25 @@ See the LICENSE file for details.
 This chart shows the top features most correlated with log(k), helping guide feature selection and model interpretation.
 
 ## 🔬 Feature Importance (SHAP Analysis)
-SHAP Summary (Random Forest)
+
+### 🔬 SHAP Summary — Random Forest
 ![SHAP RF](images/shap_rf_summary.png)
 
-SHAP Summary (XGBoost)
+### 🔬 SHAP Summary — XGBoost
 ![SHAP XGB](images/shap_xgb_summary.png)
 
 ## 📊 Model Performance
 
 ### 📈 Model Comparison
 
-| Model          | RMSE   | MAE    | R² Score |
-|----------------|--------|--------|----------|
-| LinearRegression | 0.132 | 0.098 | 0.842    |
-| SVR             | 0.128 | 0.095 | 0.856    |
-| RandomForest    | 0.114 | 0.087 | 0.881    |
-| XGBoost         | 0.111 | 0.085 | 0.889    |
+| Model                   |       R2 |      MSE |      MAE |
+|:------------------------|---------:|---------:|---------:|
+| RandomForest (Full)     | 0.938418 | 1.09331  | 0.427362 |
+| RandomForest (Selected) | 0.808744 | 3.39548  | 0.764524 |
+| SVR (Full)              | 0.962272 | 0.669801 | 0.428768 |
+| SVR (Selected)          | 0.786117 | 3.79718  | 0.793537 |
+| XGBoost (Full)          | 0.95132  | 0.86424  | 0.507642 |
+| XGBoost (Selected)      | 0.826873 | 3.07362  | 0.755049 |
 
 📁 You can view the full model performance table here:  
 [📄 model_performance.csv](./results/model_performance.csv)
@@ -88,7 +94,7 @@ SHAP Summary (XGBoost)
 
 ![Parity Plot](images/parity_plot_all_models.png)
 
-This chart compares actual vs predicted ionic conductivity across all models.
+This scatter plot visualizes the agreement between actual and predicted values for each model.
 XGBoost and SVR perform particularly well with low scatter.
 
 
@@ -114,13 +120,21 @@ This summary box presents the optimal electrolyte condition based on the top-per
 
 ## 📦 Installation
 
+```bash
 git clone https://github.com/Kyeongbin-Tom/calisol23-ionic-conductivity.git
 cd calisol23-ionic-conductivity
 pip install -r requirements.txt
+```
 
 ## 🏃‍♂️ How to Run
 
 python src/calisol23_modeling.py
+
+This script will:
+  - Preprocess the CALiSol‑23 dataset
+  - Train SVR, Random Forest, and XGBoost models
+  - Generate SHAP plots and performance comparison
+  - Recommend top electrolyte compositions based on top 10% conductivity samples
 
 ## ✨ Future Improvements
 
