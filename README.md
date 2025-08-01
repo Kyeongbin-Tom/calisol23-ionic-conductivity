@@ -2,10 +2,13 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-This repository contains a machine learning project for predicting and analyzing the ionic conductivity of lithium-based electrolytes using the **CALiSol‑23 dataset**.  
-The project includes feature importance analysis, model comparison (Random Forest, SVR, XGBoost), and a recommendation system for optimal electrolyte compositions.
+## 🔍 Overview
+This project explores how machine learning can predict the ionic conductivity of lithium-ion electrolytes based on experimental composition data.
+We utilize the **CALiSol‑23 dataset** and apply multiple regression models with SHAP analysis interpretation and optimal composition recommendation.
 
----
+## 🎯 Objective
+As a first-year chemical engineering student, my goal was to combine machine learning and experimentation to predict and optimize the results. 
+I focused on figuring out how composition and temperature affect ionic conductivity, and how to recommend better electrolyte formulations.
 
 ## 📁 Project Structure
 
@@ -44,17 +47,25 @@ This dataset is freely available for redistribution and modification, provided t
 See the LICENSE file for details.
 
 ## ⚙️ Models Used
-Random Forest Regressor
+- Random Forest Regressor
+- Support Vector Regression (SVR)
+- XGBoost Regressor
 
-Support Vector Regression (SVR)
-
-XGBoost Regressor
-
-Each model was trained on:
+ Each model was trained on:
 
 ✅ Full Feature Set
 
 ✅ Top-5 Selected Features (from SHAP + Correlation)
+
+## 📈 Correlation Analysis
+
+This chart shows the top features most correlated with log(k), helping guide feature selection and model interpretation.
+
+## 🔬 Feature Importance (SHAP Analysis)
+SHAP Summary (Random Forest)
+
+SHAP Summary (XGBoost)
+
 
 ## 📊 Model Performance Comparison
 
@@ -66,6 +77,35 @@ SVR (Selected)	0.786117	3.79718	0.793537
 XGBoost (Full)	0.951320	0.86424	0.507642
 XGBoost (Selected)	0.826873	3.07362	0.755049
 
+
+📈 Parity Plot (All Models)
+
+This chart compares actual vs predicted ionic conductivity across all models.
+XGBoost and SVR perform particularly well with low scatter.
+
+
+## 🧪 Recommendation System
+
+The top 10% of conductivity samples were analyzed to extract the most frequent composition patterns and optimal conditions.
+
+### 🧪 Top Solvent Fractions in High-Conductivity Samples
+
+![Top Solvents](images/top10_recommendation.png)
+
+This bar chart shows the average solvent fractions among the top 10% highest conductivity samples.  
+**PC**, **EC**, and **DME** were most frequently used in high-performance compositions.
+
+### 📋 Recommended Electrolyte Summary
+
+![Recommendation Summary](images/top10_recommendation.summary.png)
+
+This summary box presents the optimal electrolyte condition based on the top-performing 10% samples:
+
+- **Salt**: LiPF₆  
+- **Solvent Ratio Type**: w  
+- **Average Temperature**: 323.4 °C  
+- **Average Concentration**: 0.95 mol/L
+
 ## 📦 Installation
 
 git clone https://github.com/Kyeongbin-Tom/calisol23-ionic-conductivity.git
@@ -75,3 +115,13 @@ pip install -r requirements.txt
 ## 🏃‍♂️ How to Run
 
 python src/calisol23_modeling.py
+
+## ✨ Future Improvements
+
+  - Hyperparameter tuning (GridSearchCV, Optuna)
+  - More advanced models (CatBoost, LightGBM)
+  - SHAP dependence plots for continuous variables
+  - External validation with other electrolyte datasets
+
+## 📜 License
+This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
