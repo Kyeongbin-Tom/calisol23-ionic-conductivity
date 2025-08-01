@@ -8,7 +8,7 @@ This project explores how machine learning can predict the ionic conductivity of
 We utilize the **CALiSol‑23 dataset** and apply multiple regression models with SHAP analysis interpretation and optimal composition recommendation.
 
 ## 🎯 Objective
-As a first-year chemical engineering student, I aimed to explore how machine learning can be applied to real experimental data.  
+As a first-year chemical engineering student, I aimed to apply machine learning to real-world experimental data and extract meaningful chemical insights from it. 
 This project helped me understand the relationship between composition and conductivity, while gaining hands-on experience in end-to-end modeling.
 
 ## 📁 Project Structure
@@ -59,7 +59,7 @@ This dataset is freely available for redistribution and modification, provided t
 ## 📈 Correlation Analysis
 
 ![Correlation](images/correlation_top20.png)
-This chart displays the top features most strongly correlated with log(k), aiding in feature selection and model interpretation.
+This plot helps identify features with strong linear correlation to ionic conductivity, serving as a basis for feature selection.
 
 ## 🔬 Feature Importance (SHAP Analysis)
 
@@ -69,8 +69,16 @@ This chart displays the top features most strongly correlated with log(k), aidin
 ### 🔬 SHAP Summary — XGBoost
 ![SHAP XGB](images/shap_xgb_summary.png)
 
-#### 🔍 What It Shows
-Feature impact on conductivity prediction — helps interpret black-box models.
+
+#### 📌 SHAP Interpretation Summary
+Temperature (T) was the most influential feature. Higher temperatures enhance ion mobility, leading to increased ionic conductivity.
+Salt concentration (c) also played a key role, but its effect was non-linear — conductivity peaked at an optimal concentration.
+
+Propylene Carbonate (PC) and Ethylene Carbonate (EC) were the most important solvents due to their high polarity and ion dissociation capabilities.
+These carbonate-based solvents are commonly used to enhance lithium ion transport.
+
+LiPF₆ and LiBF₄ were the most relevant lithium salts, both widely adopted in commercial electrolyte formulations.
+The solvent ratio type (categorical) also influenced conductivity, indicating formulation-dependent effects.
 
 ## 📊 Model Performance
 
@@ -94,6 +102,15 @@ Feature impact on conductivity prediction — helps interpret black-box models.
 This scatter plot visualizes the agreement between actual and predicted values for each model.
 XGBoost and SVR perform particularly well with low scatter.
 
+#### 📌 Model Comparison Summary
+The SVR (Full) model achieved the highest R² (0.9623) and the lowest MSE, showing that a linear decision boundary in high-dimensional space fits this data well.
+The XGBoost (Full) model also performed strongly (R² = 0.9513), making it the best-performing tree-based model.
+
+When limited to the top-5 selected features, all models showed a significant drop in accuracy, indicating that key interactions may be lost when simplifying input variables.
+
+Among all candidates, XGBoost demonstrated the best balance between accuracy and interpretability, making it a reliable and robust choice.
+
+These findings align with established battery chemistry, where carbonate solvents and specific lithium salts are known to enhance conductivity.
 
 ## 🧪 Recommendation System
 
@@ -119,6 +136,8 @@ These conditions reflect the most commonly observed trends in high-performance s
 Notably, LiPF₆ salt and PC-rich solvents yielded consistently higher conductivity.
 
 ## 📦 Installation
+
+Tested with: Python 3.11
 
 Clone the repository and install required dependencies:
 
@@ -148,4 +167,4 @@ This script will:
   - External validation with other electrolyte datasets
 
 ## 📜 License
-This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
+This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0), which allows sharing and adaptation with attribution.
