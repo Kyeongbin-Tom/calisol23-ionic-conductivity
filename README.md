@@ -78,12 +78,12 @@ Feature impact on conductivity prediction — helps interpret black-box models.
 
 | Model                   |   R²     |   MSE    |   MAE    |
 |-------------------------|----------|----------|----------|
-| RandomForest (Full)     | 0.938     | 1.093     | 0.427     |
-| RandomForest (Selected) | 0.809     | 3.395     | 0.765     |
-| SVR (Full)              | 0.962     | 0.670     | 0.429     |
-| SVR (Selected)          | 0.786     | 3.797     | 0.794     |
-| XGBoost (Full)          | 0.951     | 0.864     | 0.508     |
-| XGBoost (Selected)      | 0.827     | 3.074     | 0.755     |
+| RandomForest (Full)     | 0.9384   | 1.0933   | 0.4274   |
+| RandomForest (Selected) | 0.8087   | 3.3955   | 0.7645   |
+| SVR (Full)              | 0.9623   | 0.6698   | 0.4288   |
+| SVR (Selected)          | 0.7861   | 3.7972   | 0.7935   |
+| XGBoost (Full)          | 0.9513   | 0.8642   | 0.5076   |
+| XGBoost (Selected)      | 0.8269   | 3.0736   | 0.7550   |
 
 📁 See full table: [results/model_performance.csv](./results/model_performance.csv)
 
