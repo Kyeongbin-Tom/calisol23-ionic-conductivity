@@ -8,8 +8,8 @@ This project explores how machine learning can predict the ionic conductivity of
 We utilize the **CALiSol‑23 dataset** and apply multiple regression models with SHAP analysis interpretation and optimal composition recommendation.
 
 ## 🎯 Objective
-As a first-year chemical engineering student, my goal was to combine machine learning and experimentation to predict and optimize the results. 
-I focused on understanding how **electrolyte composition** and **temperature** affect ionic conductivity, and how to **recommend optimal formulations** using interpretable machine learning.
+As a first-year chemical engineering student, I aimed to explore how machine learning can be applied to real experimental data.  
+This project helped me understand the relationship between composition and conductivity, while gaining hands-on experience in end-to-end modeling.
 
 ## 📁 Project Structure
 
@@ -32,7 +32,7 @@ calisol23-ionic-conductivity/
 └── README.md
 ```
 
-📊 Dataset Information
+## 📊 Dataset Information
 This project uses the CALiSol‑23 dataset, which contains experimental ionic conductivity data for various lithium salt and solvent combinations.
 
 | Item        | Detail                                                                                     |
@@ -76,14 +76,14 @@ Feature impact on conductivity prediction — helps interpret black-box models.
 
 ### 📈 Model Comparison
 
-| Model                   |       R2 |      MSE |      MAE |
-|:------------------------|---------:|---------:|---------:|
-| RandomForest (Full)     | 0.938418 | 1.09331  | 0.427362 |
-| RandomForest (Selected) | 0.808744 | 3.39548  | 0.764524 |
-| SVR (Full)              | 0.962272 | 0.669801 | 0.428768 |
-| SVR (Selected)          | 0.786117 | 3.79718  | 0.793537 |
-| XGBoost (Full)          | 0.95132  | 0.86424  | 0.507642 |
-| XGBoost (Selected)      | 0.826873 | 3.07362  | 0.755049 |
+| Model                   |   R²     |   MSE    |   MAE    |
+|-------------------------|----------|----------|----------|
+| RandomForest (Full)     | 0.938     | 1.093     | 0.427     |
+| RandomForest (Selected) | 0.809     | 3.395     | 0.765     |
+| SVR (Full)              | 0.962     | 0.670     | 0.429     |
+| SVR (Selected)          | 0.786     | 3.797     | 0.794     |
+| XGBoost (Full)          | 0.951     | 0.864     | 0.508     |
+| XGBoost (Selected)      | 0.827     | 3.074     | 0.755     |
 
 📁 See full table: [results/model_performance.csv](./results/model_performance.csv)
 
@@ -115,7 +115,12 @@ This summary box presents the optimal electrolyte condition based on the top-per
 - **Average Temperature**: 323.4 °C  
 - **Average Concentration**: 0.95 mol/L
 
+These conditions reflect the most commonly observed trends in high-performance samples.  
+Notably, LiPF₆ salt and PC-rich solvents yielded consistently higher conductivity.
+
 ## 📦 Installation
+
+Clone the repository and install required dependencies:
 
 ```bash
 git clone https://github.com/Kyeongbin-Tom/calisol23-ionic-conductivity.git
@@ -125,6 +130,7 @@ pip install -r requirements.txt
 
 ## 🏃‍♂️ How to Run
 
+```bash
 python src/calisol23_modeling.py
 
 This script will:
@@ -132,6 +138,7 @@ This script will:
   - Train SVR, Random Forest, and XGBoost models
   - Generate SHAP plots and performance comparison
   - Recommend top electrolyte compositions based on top 10% conductivity samples
+```
 
 ## ✨ Future Improvements
 
