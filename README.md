@@ -96,14 +96,12 @@ The top 10% of conductivity samples were analyzed to extract the most frequent c
 ### 🧪 Top Solvent Fractions in High-Conductivity Samples
 
 ![Top Solvents](images/top10_recommendation.png)
-
 This bar chart shows the average solvent fractions among the top 10% highest conductivity samples.  
 **PC**, **EC**, and **DME** were most frequently used in high-performance compositions.
 
 ### 📋 Recommended Electrolyte Summary
 
 ![Recommendation Summary](images/top10_recommendation.summary.png)
-
 This summary box presents the optimal electrolyte condition based on the top-performing 10% samples:
 
 - **Salt**: LiPF₆  
