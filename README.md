@@ -59,13 +59,15 @@ See the LICENSE file for details.
 
 ## 📈 Correlation Analysis
 
+![Correlation](images/correlation_top20.png)
 This chart shows the top features most correlated with log(k), helping guide feature selection and model interpretation.
 
 ## 🔬 Feature Importance (SHAP Analysis)
 SHAP Summary (Random Forest)
+![SHAP RF](images/shap_rf_summary.png)
 
 SHAP Summary (XGBoost)
-
+![SHAP XGB](images/shap_xgb_summary.png)
 
 ## 📊 Model Performance Comparison
 
@@ -79,6 +81,8 @@ XGBoost (Selected)	0.826873	3.07362	0.755049
 
 
 📈 Parity Plot (All Models)
+
+![Parity Plot](images/parity_plot_all_models.png)
 
 This chart compares actual vs predicted ionic conductivity across all models.
 XGBoost and SVR perform particularly well with low scatter.
