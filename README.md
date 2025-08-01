@@ -43,7 +43,7 @@ This dataset is freely available for redistribution and modification, provided t
   - 📜 This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
 See the LICENSE file for details.
 
-⚙️ Models Used
+## ⚙️ Models Used
 Random Forest Regressor
 
 Support Vector Regression (SVR)
@@ -56,3 +56,22 @@ Each model was trained on:
 
 ✅ Top-5 Selected Features (from SHAP + Correlation)
 
+## 📊 Model Performance Comparison
+
+Model	R²	MSE	MAE
+RandomForest (Full)	0.938418	1.09331	0.427362
+RandomForest (Selected)	0.808744	3.39548	0.764524
+SVR (Full)	0.962272	0.669801	0.428768
+SVR (Selected)	0.786117	3.79718	0.793537
+XGBoost (Full)	0.951320	0.86424	0.507642
+XGBoost (Selected)	0.826873	3.07362	0.755049
+
+## 📦 Installation
+
+git clone https://github.com/Kyeongbin-Tom/calisol23-ionic-conductivity.git
+cd calisol23-ionic-conductivity
+pip install -r requirements.txt
+
+## 🏃‍♂️ How to Run
+
+python src/calisol23_modeling.py
