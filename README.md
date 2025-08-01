@@ -29,6 +29,7 @@ calisol23-ionic-conductivity/
 │   └── calisol23_modeling.py
 ├── requirements.txt
 └── README.md
+```
 
 📊 Dataset Information
 This project uses the CALiSol‑23 dataset, which contains experimental ionic conductivity data for various lithium salt and solvent combinations.
