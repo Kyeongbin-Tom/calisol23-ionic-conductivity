@@ -1,7 +1,5 @@
-# 🔋 CALiSol‑23: Ionic Conductivity Prediction
-```txt
-Machine learning-based prediction of lithium-ion electrolyte conductivity using CALiSol‑23 dataset.
-```
+# 🔋 CALiSol‑23: Ionic Conductivity Prediction  
+> *Machine learning-based prediction of lithium-ion electrolyte conductivity using the CALiSol‑23 dataset.*
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -37,18 +35,15 @@ calisol23-ionic-conductivity/
 📊 Dataset Information
 This project uses the CALiSol‑23 dataset, which contains experimental ionic conductivity data for various lithium salt and solvent combinations.
 
-  - 📚 Citation:
-Niels Asger Mortensen et al., "CALiSol‑23: Experimental electrolyte conductivity data for various Li‑salts and solvent combinations", Scientific Data (2024)
-DOI: [10.1038/s41597-024-03575-8](https://doi.org/10.1038/s41597-024-03575-8)
-
-  - 📁 Dataset Repository: DTU Data Portal
-
-  - 📄 License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+| Item        | Detail                                                                                     |
+|-------------|---------------------------------------------------------------------------------------------|
+| **Name**    | CALiSol‑23                                                                                  |
+| **Citation**| Mortensen et al., *Scientific Data* (2024)                                                  |
+| **DOI**     | [10.1038/s41597-024-03575-8](https://doi.org/10.1038/s41597-024-03575-8)                    |
+| **Source**  | [DTU Data Portal](https://doi.org/10.11583/DTU.24978278)                                    |
+| **License** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                                   |
 
 This dataset is freely available for redistribution and modification, provided that appropriate credit is given.
-
-  - 📜 This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
-See the LICENSE file for details.
 
 ## ⚙️ Models Used
 - Random Forest Regressor
@@ -74,6 +69,9 @@ This chart displays the top features most strongly correlated with log(k), aidin
 ### 🔬 SHAP Summary — XGBoost
 ![SHAP XGB](images/shap_xgb_summary.png)
 
+#### 🔍 What It Shows
+Feature impact on conductivity prediction — helps interpret black-box models.
+
 ## 📊 Model Performance
 
 ### 📈 Model Comparison
@@ -87,8 +85,7 @@ This chart displays the top features most strongly correlated with log(k), aidin
 | XGBoost (Full)          | 0.95132  | 0.86424  | 0.507642 |
 | XGBoost (Selected)      | 0.826873 | 3.07362  | 0.755049 |
 
-📁 You can view the full model performance table here:  
-[📄 model_performance.csv](./results/model_performance.csv)
+📁 See full table: [results/model_performance.csv](./results/model_performance.csv)
 
 📈 Parity Plot (All Models)
 
