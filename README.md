@@ -11,12 +11,9 @@ We utilize the **CALiSol‑23 dataset** and apply multiple regression models wit
 As a first-year chemical engineering student, I aimed to apply machine learning to real-world experimental data and extract meaningful chemical insights from it. 
 This project helped me understand the relationship between composition and conductivity, while gaining hands-on experience in end-to-end modeling.
 
-## 📁 Project Structure
-
-```bash
 calisol23-ionic-conductivity/
 ├── data/
-│   └── calisol23.xlsx
+│   └── calisol23.xlsx          # (ignored by .gitignore, local only)
 ├── images/
 │   ├── correlation_top20.png
 │   ├── shap_rf_summary.png
@@ -27,9 +24,11 @@ calisol23-ionic-conductivity/
 ├── results/
 │   └── model_performance.csv
 ├── src/
-│   └── calisol23_modeling.py
-├── requirements.txt
-└── README.md
+│   └── calisol23_modeling.py   # Main modeling script
+├── .gitignore                  # Ignore rules for local files (e.g., .xlsx, __pycache__)
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project documentation
+
 ```
 
 ## 📊 Dataset Information
