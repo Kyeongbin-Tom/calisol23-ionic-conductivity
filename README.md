@@ -13,10 +13,10 @@ This project helped me understand the relationship between composition and condu
 
 ## 📁 Project Structure
 
-bash
+```bash
 calisol23-ionic-conductivity/
 ├── data/
-│   └── calisol23.xlsx          # (ignored by .gitignore, local only)
+│   └── calisol23.xlsx                 # (ignored by .gitignore, local only)
 ├── images/
 │   ├── correlation_top20.png
 │   ├── shap_rf_summary.png
@@ -27,10 +27,11 @@ calisol23-ionic-conductivity/
 ├── results/
 │   └── model_performance.csv
 ├── src/
-│   └── calisol23_modeling.py   # Main modeling script
-├── .gitignore                  # Ignore rules for local files (e.g., .xlsx, __pycache__)
-├── requirements.txt           # Python dependencies
-└── README.md                  # Project documentation
+│   └── calisol23_modeling.py         # Main modeling script
+├── .gitignore                        # Ignore rules for local files (e.g., .xlsx, __pycache__)
+├── requirements.txt                 # Python dependencies
+└── README.md                         # Project documentation
+```
 
 ## 📊 Dataset Information
 This project uses the CALiSol‑23 dataset, which contains experimental ionic conductivity data for various lithium salt and solvent combinations.
